@@ -24,6 +24,8 @@
 
     <h1 style="background-color: rgb(70, 195, 245);"><center>FAKULTAS EKONOMI DAN BISNIS</center></strong></h1>
     <h2><strong><center>Tentang Kami</center></strong></h2>
+    <center><img src="\static\images\logo1.png" width="300" height="300" alt=""></center>
+
     <h3><strong>Sejarah</strong></h3>
     <p>Fakultas Ekonomi Universitas Sultan Ageng Tirtayasa (UNTIRTA) merupakan Lembaga Pendidikan Tinggi, yang pada awal pendiriannya bernaung di bawah Yayasan Pendidikan Tirtayasa (Yapenta). Yapenta sendiri merupakan yayasan yang telah berdiri pada tanggal 1 Oktober 1980, berdasarkan Akte Notaris Nomor 1 tahun 1980. Kemudian dilakukan penyempurnaan dengan pengukuhan kembali Akte Notaris Ny. R. Arie Soetardjo, Nomor 1, tanggal 3 Maret 1986. Pada tahun 1981, Yapenta mendirikan Sekolah Tinggi Ilmu Hukum (STIH) disusul pada tahun 1982 dengan pendirian Sekolah Tinggi Keguruan dan Ilmu Pendidikan (STKIP). Sementara pada waktu bersamaan Yayasan Krakatau Steel Cilegon mendirikan Sekolah Tinggi Teknik (STT). Kemudian STT di bawah Yayasan Krakatau Steel Cilegon bergabung dengan Yapenta untuk persiapan berdirinya Universitas Tirtayasa Serang Banten. Berdasarkan Surat Keputusan Menteri Pendidikan dan Kebudayaan RI Nomor: 0596/0/1984, tanggal 28 November 1984, terbentuk Universitas Tirtayasa Serang Banten yang merupakan penggabungan dari STIH, STT, dan STKIP, dan perubahan status sekolah tinggi menjadi Fakultas Hukum, Fakultas Keguruan dan Ilmu Pendidikan (FKIP) dan Fakultas Teknik.</p>
     <p>Pada tahun 1986, atas dukungan dari para cendikiawan dan tokoh masyarakat saat itu, seperti; Surjadi Sudirja, Tubagus M. Rais, Dorojatun Kuncoro Jakti, Tungki Ariwibowo, dan Sudarmono, selanjutnya dilakukan pengembangan untuk mendirikan Fakultas Ekonomi. Selanjutnya, Fakultas Ekonomi UNTIRTA mendapatkan ijin operasional pada tahun 1986 untuk membuka Jurusan Manajemen. Kemudian, atas anjuran dan dukungan dari PT Krakatau Steel, Fakultas Ekonomi UNTIRTA membuka Jurusan Akuntansi di tahun 1987. Sebagian besar tenaga pengajar Fakultas Ekonomi UNTIRTA berasal dari PT Krakatau Steel dan Pemerintah Daerah Kabupaten Serang. Pada waktu itu, Jurusan Manajemen Fakultas Ekonomi Untirta menempati Gedung LAPENTA di Pakupatan Serang, sedangkan Jurusan Akuntansi menggunakan ruang perkuliahan Lantai 2 di Fakultas Teknik Cilegon. Fakultas Ekonomi UNTIRTA kemudian mendapatkan status terdaftar pada tahun 1989 dengan Surat Keputusan Menteri Pendidikan dan Kebudayaan RI Nomor: 0331/0/1989 tanggal 30 Mei 1989. Pada tahun 1998, Fakultas Ekonomi UNTIRTA UNTIRTA mendapatkan status diakui untuk Jurusan Manajemen dan status terdaftar untuk Jurusan Akuntansi. Pada tahun 1992, Sarjana Ekonomi pertama yang dihasilkan oleh Fakultas Ekonomi Untirta sebanyak 3 (tiga) orang, dari Jurusan Manajemen, setelah melaksanakan ujian tulis di Kampus Untirta Pakupatan dan Ujian Lisan sebanyak 14 mata kuliah oleh tenaga pengajar dari Universitas Padjadjaran Bandung.</p>
@@ -32,4 +34,80 @@
     <br>
     <br>
     <br>
+
+    <h2>Daftar Nama Dosen Fakultas Ekonomi Bisnis</h2>
+        <table class="table table-success table-striped">
+            <tr>
+                <th>NIP</th>
+                <th>Nama</th>
+                <th>Tanggal Lahir</th>
+                <th>Foto</th>
+                <th>Email</th>
+                <th>Fakultas</th>
+                <th>Prodi</th>
+                <th>Alamat</th>
+            </tr>
+            {% for dosen in dataDosen %}
+            <tr>
+                <td>{{ dosen.nip }}</td>
+                <td>{{ dosen.nama }}</td>
+                <td>{{ dosen.tanggal_lahir }}</td>
+                <td>{{ dosen.foto }}</td>
+                <td>{{ dosen.email }}</td>
+                <td>{{ dosen.fakultas }}</td>
+                <td>{{ dosen.prodi }}</td>
+                <td>{{ dosen.alamat }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br>
+        <h2>Daftar Nama Staf Fakultas Ekonomi Bisnis</h2>
+        <table class="table table-success table-striped">
+            <tr>
+                <th>NIP</th>
+                <th>Nama</th>
+                <th>Tanggal Lahir</th>
+                <th>Foto</th>
+                <th>Email</th>
+                <th>Unit</th>
+                <th>Alamat</th>
+            </tr>
+            {% for staf in dataStaf %}
+            <tr>
+                <td>{{ staf.nip }}</td>
+                <td>{{ staf.nama }}</td>
+                <td>{{ staf.tanggal_lahir }}</td>
+                <td>{{ staf.foto }}</td>
+                <td>{{ staf.email }}</td>
+                <td>{{ staf.unit }}</td>
+                <td>{{ staf.alamat }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br>
+        <h2>Daftar Nama Mahasiswa Fakultas Ekonomi Bisnis</h2>
+        <table class="table table-success table-striped">
+            <tr>
+                <th>NIM</th>
+                <th>Nama</th>
+                <th>Tanggal Lahir</th>
+                <th>Foto</th>
+                <th>Email</th>
+                <th>Fakultas</th>
+                <th>Prodi</th>
+                <th>Alamat</th>
+            </tr>
+            {% for mahasiswa in dataMahasiswa %}
+            <tr>
+                <td>{{ mahasiswa.nim }}</td>
+                <td>{{ mahasiswa.nama }}</td>
+                <td>{{ mahasiswa.tanggal_lahir }}</td>
+                <td>{{ mahasiswa.foto }}</td>
+                <td>{{ mahasiswa.email }}</td>
+                <td>{{ mahasiswa.fakultas }}</td>
+                <td>{{ mahasiswa.prodi }}</td>
+                <td>{{ mahasiswa.alamat }}</td>
+            </tr>
+            {% endfor %}
+            </table>
 {% endblock %}

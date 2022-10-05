@@ -22,9 +22,86 @@
 </style>
     <h1 style="background-color: rgb(70, 195, 245);"><center>PASCASARJANA</strong></center></h1>
     <h2><center><strong>Tentang Kami</strong></center></h2>
+    <center><img src="\static\images\untirta.jpg" width="300" height="300" alt=""></center>
     <h3><strong>Sejarah</strong></h3>
     <p>Universitas Sultan Ageng Tirtayasa tidak hanya mengasuh program Sarjana dan Diploma III. akan tetapi juga menyelenggaran pendidikan Pascasarjana. Pembukaan Program Magister (S2) Universitas Sultan Ageng Tirtayasa merupakan sebuah respon atas mendesaknya kebutuhan tenaga profesional dalam berbagai bidang seiring dengan tuntutan perubahan dibidang pendidikan dan pemerintahan, Kebutuhan sumber daya manusia yang berkualitas dan profesional merupakan suatu realitas sejalan dengan transformasi Banten yang semula hanya sebagai wilayah Pembantu Gubernur/Karesidenan yang tidak cukup hanya SDM aparatur memiliki kualifikasi pendidikan Sarjana (S1). karenanya untuk menjawab kebutuhan pengembangan Sumber Daya Manusia tenaga pendidik dan kependidikan serta bidang-bidang profesi lainnya kehadiran Pascasarjana merupakan sebuah keniscayaan dan menjadi suatu kebutuhan. Selain itu, Pascasarjana merupakan kawah candradimuka pengembangan keilmuan yang dapat menghasilkan karya-karya ilmiah melalui riset unggulan dan menghasilkan lulusan yang memiliki kualifikasi teoretik, metodologis, analitik, dan praktis yang bermutu dalam ilmu pendidikan, Pendidikan Bahasa, Ilmu Hukum, Administrasi Publik, Ekonomi Akuntansi dan Manajemen. Secara khusus Program Pascasarjana Universitas Sultan Ageng Tirtayasa bertujuan menghasilkan lulusan dengan kualifikasi sebagai berikut: menguasai teori-teori dalam disiplin Ilmu pendidikan, pendidikan bahasa, ilmu hukum, Ilmu Administrasi Publik, Ekonomi akuntansi dan Manajemen secara komprehensif dan terpadu: Mempunyai keinginan kuat untuk memajukan Ilmu pendidikan, pendidikan bahasa, ilmu hukum, Ilmu Administrasi Publik, Ekonomi Akuntansi dan Manajemen; Memiliki kepekaan terhadap perubahan perubahan lingkungan akademik maupun lingkungan kerja, yang diwujudkan dalam kegiatan penelitian dan pengabdian kepada masyarakat</p>
 <br>
 <br>
 <br>
+
+<h2>Daftar Nama Dosen Pascasarjana</h2>
+        <table class="table table-success table-striped">
+            <tr>
+                <th>NIP</th>
+                <th>Nama</th>
+                <th>Tanggal Lahir</th>
+                <th>Foto</th>
+                <th>Email</th>
+                <th>Fakultas</th>
+                <th>Prodi</th>
+                <th>Alamat</th>
+            </tr>
+            {% for dosen in dataDosen %}
+            <tr>
+                <td>{{ dosen.nip }}</td>
+                <td>{{ dosen.nama }}</td>
+                <td>{{ dosen.tanggal_lahir }}</td>
+                <td>{{ dosen.foto }}</td>
+                <td>{{ dosen.email }}</td>
+                <td>{{ dosen.fakultas }}</td>
+                <td>{{ dosen.prodi }}</td>
+                <td>{{ dosen.alamat }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br>
+        <h2>Daftar Nama Staf Pascasarjana</h2>
+        <table class="table table-success table-striped">
+            <tr>
+                <th>NIP</th>
+                <th>Nama</th>
+                <th>Tanggal Lahir</th>
+                <th>Foto</th>
+                <th>Email</th>
+                <th>Unit</th>
+                <th>Alamat</th>
+            </tr>
+            {% for staf in dataStaf %}
+            <tr>
+                <td>{{ staf.nip }}</td>
+                <td>{{ staf.nama }}</td>
+                <td>{{ staf.tanggal_lahir }}</td>
+                <td>{{ staf.foto }}</td>
+                <td>{{ staf.email }}</td>
+                <td>{{ staf.unit }}</td>
+                <td>{{ staf.alamat }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br>
+        <h2>Daftar Nama Mahasiswa Pascasarjana</h2>
+        <table class="table table-success table-striped">
+            <tr>
+                <th>NIM</th>
+                <th>Nama</th>
+                <th>Tanggal Lahir</th>
+                <th>Foto</th>
+                <th>Email</th>
+                <th>Fakultas</th>
+                <th>Prodi</th>
+                <th>Alamat</th>
+            </tr>
+            {% for mahasiswa in dataMahasiswa %}
+            <tr>
+                <td>{{ mahasiswa.nim }}</td>
+                <td>{{ mahasiswa.nama }}</td>
+                <td>{{ mahasiswa.tanggal_lahir }}</td>
+                <td>{{ mahasiswa.foto }}</td>
+                <td>{{ mahasiswa.email }}</td>
+                <td>{{ mahasiswa.fakultas }}</td>
+                <td>{{ mahasiswa.prodi }}</td>
+                <td>{{ mahasiswa.alamat }}</td>
+            </tr>
+            {% endfor %}
+            </table>
 {% endblock %}

@@ -24,6 +24,7 @@
     
     <h1 style="background-color: rgb(70, 195, 245);"><center>FAKULTAS TEKNIK</center></h1>
     <h2><center><strong>Tentang Kami</strong></center></h2>
+    <center><img src="\static\images\download.jpg" width="300" height="300" alt=""></center>
     <p>Fakultas Teknik merupakan salah satu fakultas dalam lingkungan Universitas Sultan Ageng Tirtayasa, dimana sejak tahun 2001 Untirta telah menjadi perguruan tinggi negeri berdasarkan Surat Keputusan Presiden Republik Indonesia Nomor 32 tanggal 19 Maret tahun 2001.Kampus FT. Untirta berada dalam Kawasan Industri Cilegon, dimana pada kawasan ini terdapat berbagai macam industri logam berat, kimia, manufacture, engineering dan pembangkit listrik, diantaranya PT. Krakatau Steel & Group, PT. Krakatau Posco, PT. Candra Asri, PT. Asahimas, PT. Tri Polita, PT. PLN (Persero) PLTGU Cilegon, PT. Indonesia Power UBP Suralaya dan sebagainya. Secara geografis, Fakultas Teknik Untirta berada pada gerbang dan lintasan perdagangan Jawa-Sumatera serta lintas perdagangan internasional, yaitu dengan adanya pelabuhan penyeberangan ASDP di Merak serta beberapa pelabuhan internasional diantaranya Cigading, Bojonegara dan Krakatau Bandar Samudra. Secara administratif, Fakultas Teknik Untirta berada di Kota Cilegon dan Provinsi Banten yang terus berkembang.</p>
     <h3><strong>Sejarah</strong></h3>
     <p>Fakultas Teknik Untirta merupakan salah satu fakultas yang menjadi cikal bakal berdirinya Untirta. Lahirnya Fakultas Teknik berawal dari gagasan jajaran direksi dan manajemen PT. Krakatau Steel (Bapak Ir. Djoko Subagyo dan Team). Fakultas Teknik terlahir sebagai wujud cita-cita masyarakat, ulama, cendekiawan dan para pemimpin se-wilayah Banten serta dengan dukungan PT. Krakatau Steel dan industri petrokimia di kawasan industri Cilegon.</p>
@@ -76,5 +77,79 @@
     <br>
     <br>
     <br>
-
+    <h2>Daftar Nama Dosen Fakultas Teknik</h2>
+    <table class="table table-success table-striped">
+        <tr>
+            <th>NIP</th>
+            <th>Nama</th>
+            <th>Tanggal Lahir</th>
+            <th>Foto</th>
+            <th>Email</th>
+            <th>Fakultas</th>
+            <th>Prodi</th>
+            <th>Alamat</th>
+        </tr>
+        {% for dosen in dataDosen %}
+        <tr>
+            <td>{{ dosen.nip }}</td>
+            <td>{{ dosen.nama }}</td>
+            <td>{{ dosen.tanggal_lahir }}</td>
+            <td>{{ dosen.foto }}</td>
+            <td>{{ dosen.email }}</td>
+            <td>{{ dosen.fakultas }}</td>
+            <td>{{ dosen.prodi }}</td>
+            <td>{{ dosen.alamat }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <h2>Daftar Nama Staf Fakultas Teknik</h2>
+    <table class="table table-success table-striped">
+        <tr>
+            <th>NIP</th>
+            <th>Nama</th>
+            <th>Tanggal Lahir</th>
+            <th>Foto</th>
+            <th>Email</th>
+            <th>Unit</th>
+            <th>Alamat</th>
+        </tr>
+        {% for staf in dataStaf %}
+        <tr>
+            <td>{{ staf.nip }}</td>
+            <td>{{ staf.nama }}</td>
+            <td>{{ staf.tanggal_lahir }}</td>
+            <td>{{ staf.foto }}</td>
+            <td>{{ staf.email }}</td>
+            <td>{{ staf.unit }}</td>
+            <td>{{ staf.alamat }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <h2>Daftar Nama Mahasiswa Fakultas Teknik</h2>
+    <table class="table table-success table-striped">
+        <tr>
+            <th>NIM</th>
+            <th>Nama</th>
+            <th>Tanggal Lahir</th>
+            <th>Foto</th>
+            <th>Email</th>
+            <th>Fakultas</th>
+            <th>Prodi</th>
+            <th>Alamat</th>
+        </tr>
+        {% for mahasiswa in dataMahasiswa %}
+        <tr>
+            <td>{{ mahasiswa.nim }}</td>
+            <td>{{ mahasiswa.nama }}</td>
+            <td>{{ mahasiswa.tanggal_lahir }}</td>
+            <td>{{ mahasiswa.foto }}</td>
+            <td>{{ mahasiswa.email }}</td>
+            <td>{{ mahasiswa.fakultas }}</td>
+            <td>{{ mahasiswa.prodi }}</td>
+            <td>{{ mahasiswa.alamat }}</td>
+        </tr>
+        {% endfor %}
+        </table>
 {% endblock %}

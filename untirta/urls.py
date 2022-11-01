@@ -1,6 +1,3 @@
-
-
-
 from django.contrib import admin
 from django.urls import path
 from faperta.views import indexfaperta
@@ -24,5 +21,9 @@ urlpatterns = [
     path('ft/', indexft),
     path('pascasarjana/', indexpascasarjana),
     path('profil/', indexprofil),
-
+    path('tambah-dosen/', 'tambah_dosen'),
+    path('tambah-staf/', 'tambah_staf'),
+    path('tambah-mahasiswa/', 'tambah_mahasiswa'),
+    path('dosen/ubah/<int:id_dosen>', 'ubah_dosen', name="ubah_dosen"),
+    path('dosen/hapus/<int:id_dosen>', 'hapus_dosen', name="hapus_dosen"),
 ]
